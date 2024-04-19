@@ -8,17 +8,17 @@ def canUnlockAll(boxes):
     foundkeys = []
 
     for key in boxes[0]:
-        if key not in foundkeys and key < len(boxes):
+        if key not in foundkeys and key < len(boxes) and key != 0:
             foundkeys.append(key)
-    
 
     for i in range(len(foundkeys)):
         lockerkey = foundkeys[i]
 
         for key in boxes[lockerkey]:
-            if key not in foundkeys and key < len(boxes):
+            if key not in foundkeys and key < len(boxes) and key != 0:
                 foundkeys.append(key)
-    
+                print(foundkeys)
+
     if len(foundkeys) == len(boxes):
         return True
     else:
