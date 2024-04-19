@@ -21,7 +21,7 @@ def canUnlockAll(boxes):
                 print(foundkeys)
         i += 1
 
-    if len(foundkeys) == len(boxes):
+    if len(foundkeys) == len(boxes) - 1:
         return True
     else:
         return False
